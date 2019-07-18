@@ -36,6 +36,11 @@ public class Revenu implements InterfaceRevenu{
         this.beta = beta;
     }
 
+    public Revenu() {
+    }
+    
+    
+
     public int getBeta() {
         return beta;
     }

@@ -37,6 +37,11 @@ public class Monnaie implements InterfaceMonnaie{
         this.beta = beta;
     }
 
+    public Monnaie() {
+    }
+    
+    
+
     public int getBeta() {
         return beta;
     }

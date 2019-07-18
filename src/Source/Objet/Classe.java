@@ -37,6 +37,11 @@ public class Classe implements InterfaceClasse{
         this.beta = beta;
     }
 
+    public Classe() {
+    }
+    
+    
+
     public int getBeta() {
         return beta;
     }

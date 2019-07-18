@@ -42,6 +42,11 @@ public class Cours implements InterfaceCours{
         this.beta = beta;
     }
 
+    public Cours() {
+    }
+    
+    
+
     public int getBeta() {
         return beta;
     }

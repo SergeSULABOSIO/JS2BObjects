@@ -46,6 +46,11 @@ public class Frais implements InterfaceFrais{
         this.beta = beta;
     }
 
+    public Frais() {
+    }
+    
+    
+
     public double getMontantDefaut() {
         return montantDefaut;
     }

@@ -41,6 +41,11 @@ public class Agent implements InterfaceAgent{
         this.beta = beta;
     }
 
+    public Agent() {
+    }
+    
+    
+
     public int getBeta() {
         return beta;
     }

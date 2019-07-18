@@ -38,6 +38,11 @@ public class Charge implements InterfaceCharge{
         this.beta = beta;
     }
 
+    public Charge() {
+    }
+    
+    
+
     public int getBeta() {
         return beta;
     }

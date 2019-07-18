@@ -36,6 +36,11 @@ public class Periode implements InterfacePeriode{
         this.beta = beta;
     }
 
+    public Periode() {
+    }
+    
+    
+
     public int getId() {
         return id;
     }
