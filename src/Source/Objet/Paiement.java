@@ -15,12 +15,13 @@ import java.util.Date;
 public class Paiement implements InterfacePaiement{
     public int id;
     public int idEleve;
-    public int idArticle;
+    public int idExercice;
+    public int idFrais;
     public int idPeriode;
     public int mode;
     public String reference;
     public String nomEleve;
-    public String nomArticle;
+    public String nomFrais;
     public String nomDepositaire;
     public double montant;
     public Date date;
@@ -29,13 +30,14 @@ public class Paiement implements InterfacePaiement{
     public Paiement() {
     }
 
-    public Paiement(int id, int idEleve, int idArticle, int idPeriode, String nomEleve, String nomArticle, String nomDepositaire, double montant, Date date, int mode, String reference, int beta) {
+    public Paiement(int id, int idExercice, int idEleve, int idFrais, int idPeriode, String nomEleve, String nomFrais, String nomDepositaire, double montant, Date date, int mode, String reference, int beta) {
         this.id = id;
+        this.idExercice = idExercice;
         this.idEleve = idEleve;
-        this.idArticle = idArticle;
+        this.idFrais = idFrais;
         this.idPeriode = idPeriode;
         this.nomEleve = nomEleve;
-        this.nomArticle = nomArticle;
+        this.nomFrais = nomFrais;
         this.nomDepositaire = nomDepositaire;
         this.montant = montant;
         this.date = date;
@@ -121,13 +123,7 @@ public class Paiement implements InterfacePaiement{
         this.idEleve = idEleve;
     }
 
-    public int getIdArticle() {
-        return idArticle;
-    }
-
-    public void setIdArticle(int idArticle) {
-        this.idArticle = idArticle;
-    }
+    
 
     public String getReference() {
         return reference;
@@ -145,16 +141,33 @@ public class Paiement implements InterfacePaiement{
         this.nomEleve = nomEleve;
     }
 
-    public String getNomArticle() {
-        return nomArticle;
+    
+    public int getIdExercice() {
+        return idExercice;
     }
 
-    public void setNomArticle(String nomArticle) {
-        this.nomArticle = nomArticle;
+    public void setIdExercice(int idExercice) {
+        this.idExercice = idExercice;
+    }
+
+    public int getIdFrais() {
+        return idFrais;
+    }
+
+    public void setIdFrais(int idFrais) {
+        this.idFrais = idFrais;
+    }
+
+    public String getNomFrais() {
+        return nomFrais;
+    }
+
+    public void setNomFrais(String nomFrais) {
+        this.nomFrais = nomFrais;
     }
 
     @Override
     public String toString() {
-        return "XX_Paiement{" + "id=" + id + ", idEleve=" + idEleve + ", idArticle=" + idArticle + ", idPeriode=" + idPeriode + ", mode=" + mode + ", reference=" + reference + ", nomEleve=" + nomEleve + ", nomArticle=" + nomArticle + ", nomDepositaire=" + nomDepositaire + ", montant=" + montant + ", date=" + date + ", beta=" + beta + '}';
+        return "Paiement{" + "id=" + id + ", idEleve=" + idEleve + ", idExercice=" + idExercice + ", idFrais=" + idFrais + ", idPeriode=" + idPeriode + ", mode=" + mode + ", reference=" + reference + ", nomEleve=" + nomEleve + ", nomFrais=" + nomFrais + ", nomDepositaire=" + nomDepositaire + ", montant=" + montant + ", date=" + date + ", beta=" + beta + '}';
     }
 }
