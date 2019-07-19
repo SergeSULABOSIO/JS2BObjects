@@ -27,11 +27,12 @@ public class Frais implements InterfaceFrais{
     public String nom;
     public String monnaie;
     public long signatureMonnaie;
+    public long signature;
     public Vector<LiaisonFraisClasse> liaisonsClasses = new Vector<LiaisonFraisClasse>();
     public Vector<LiaisonFraisPeriode> liaisonsPeriodes = new Vector<LiaisonFraisPeriode>();
     public int beta;
 
-    public Frais(int id, int idUtilisateur, int idEntreprise, int idExercice, int idMonnaie, long signatureMonnaie, String nom, String monnaie, int nbTranches, Vector<LiaisonFraisClasse> liaisonsClasses, Vector<LiaisonFraisPeriode> liaisonsPeriodes, double montantDefaut, int beta) {
+    public Frais(int id, int idUtilisateur, int idEntreprise, int idExercice, int idMonnaie, long signatureMonnaie, long signature, String nom, String monnaie, int nbTranches, Vector<LiaisonFraisClasse> liaisonsClasses, Vector<LiaisonFraisPeriode> liaisonsPeriodes, double montantDefaut, int beta) {
         this.id = id;
         this.idUtilisateur = idUtilisateur;
         this.idEntreprise = idEntreprise;
@@ -42,11 +43,20 @@ public class Frais implements InterfaceFrais{
         this.idMonnaie = idMonnaie;
         this.monnaie = monnaie;
         this.signatureMonnaie = signatureMonnaie;
+        this.signature = signature;
         this.montantDefaut = montantDefaut;
         this.beta = beta;
     }
 
     public Frais() {
+    }
+
+    public long getSignature() {
+        return signature;
+    }
+
+    public void setSignature(long signature) {
+        this.signature = signature;
     }
     
     
@@ -196,9 +206,8 @@ public class Frais implements InterfaceFrais{
         this.liaisonsPeriodes.removeAllElements();
     }
 
-
     @Override
     public String toString() {
-        return "TEST_Frais{" + "id=" + id + ", idUtilisateur=" + idUtilisateur + ", idEntreprise=" + idEntreprise + ", idExercice=" + idExercice + ", idMonnaie=" + idMonnaie + ", montantDefaut=" + montantDefaut + ", nom=" + nom + ", monnaie=" + monnaie + ", signatureMonnaie=" + signatureMonnaie + ", liaisonsClasses=" + liaisonsClasses + ", liaisonsPeriodes=" + liaisonsPeriodes + ", beta=" + beta + '}';
+        return "Frais{" + "id=" + id + ", idUtilisateur=" + idUtilisateur + ", idEntreprise=" + idEntreprise + ", idExercice=" + idExercice + ", idMonnaie=" + idMonnaie + ", montantDefaut=" + montantDefaut + ", nom=" + nom + ", monnaie=" + monnaie + ", signatureMonnaie=" + signatureMonnaie + ", signature=" + signature + ", liaisonsClasses=" + liaisonsClasses + ", liaisonsPeriodes=" + liaisonsPeriodes + ", beta=" + beta + '}';
     }
 }

@@ -28,6 +28,7 @@ public interface InterfaceFrais {
     public abstract double getMontantDefaut();
     public abstract String getNom();
     public abstract long getSignatureMonnaie();
+    public abstract long getSignature();
     public abstract Vector<LiaisonFraisPeriode> getLiaisonsPeriodes();
     public abstract LiaisonFraisPeriode getLiaisonPeriodes(InterfacePeriode periode);
     public abstract Vector<LiaisonFraisClasse> getLiaisonsClasses();
@@ -42,6 +43,7 @@ public interface InterfaceFrais {
     public abstract void setMontantDefaut(double montantDefaut);
     public abstract void setNom(String nom);
     public abstract void setSignatureMonnaie(long signatureMonnaie);
+    public abstract void setSignature(long signature);
     public abstract void ajouterLiaisonsPeriode(LiaisonFraisPeriode liaisons);
     public abstract void setLiaisonsPeriodes(Vector<LiaisonFraisPeriode> liaisons);
     public abstract void setLiaisonsClasses(Vector<LiaisonFraisClasse> liaisons);

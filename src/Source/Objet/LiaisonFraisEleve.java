@@ -11,13 +11,15 @@ package Source.Objet;
  */
 public class LiaisonFraisEleve {
     private long signatureEleve;
+    private long signatureFrais;
     private int idFrais;
     private double montant;
     private int idMonnaie;
     private String monnaie;
 
-    public LiaisonFraisEleve(long signatureEleve, int idFrais, double montant, int idMonnaie, String monnaie) {
+    public LiaisonFraisEleve(long signatureEleve, long signatureFrais, int idFrais, double montant, int idMonnaie, String monnaie) {
         this.signatureEleve = signatureEleve;
+        this.signatureFrais = signatureFrais;
         this.idFrais = idFrais;
         this.montant = montant;
         this.idMonnaie = idMonnaie;
@@ -25,6 +27,14 @@ public class LiaisonFraisEleve {
     }
 
     public LiaisonFraisEleve() {
+    }
+
+    public long getSignatureFrais() {
+        return signatureFrais;
+    }
+
+    public void setSignatureFrais(long signatureFrais) {
+        this.signatureFrais = signatureFrais;
     }
     
     
@@ -67,13 +77,10 @@ public class LiaisonFraisEleve {
     public void setMonnaie(String monnaie) {
         this.monnaie = monnaie;
     }
-    
-    
 
     @Override
     public String toString() {
-        return "LiaisonEleveFrais{" + "signatureEleve=" + signatureEleve + ", idFrais=" + idFrais + ", montant=" + montant + ", idMonnaie=" + idMonnaie + ", monnaie=" + monnaie + '}';
+        return "LiaisonFraisEleve{" + "signatureEleve=" + signatureEleve + ", signatureFrais=" + signatureFrais + ", idFrais=" + idFrais + ", montant=" + montant + ", idMonnaie=" + idMonnaie + ", monnaie=" + monnaie + '}';
     }
-
     
 }
