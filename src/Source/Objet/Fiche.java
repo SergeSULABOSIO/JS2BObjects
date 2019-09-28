@@ -34,9 +34,10 @@ public class Fiche implements InterfaceFiche{
     public double retenu_ORDINATEUR;
     public Date dateEnregistrement;
     public String mois;
+    public long signature;
     public int beta;
 
-    public Fiche(int id, int idEntreprise, int idUtilisateur, int idExercice, int idMonnaie, int idAgent, int categorieAgent, double salaireBase, double transport, double logement, double autresGains, double retenu_IPR, double retenu_INSS, double retenu_SYNDICAT, double retenu_ABSENCE, double retenu_CAFETARIAT, double retenu_AVANCE_SALAIRE, double retenu_ORDINATEUR, Date dateEnregistrement, String mois, int beta) {
+    public Fiche(int id, int idEntreprise, int idUtilisateur, int idExercice, int idMonnaie, int idAgent, int categorieAgent, double salaireBase, double transport, double logement, double autresGains, double retenu_IPR, double retenu_INSS, double retenu_SYNDICAT, double retenu_ABSENCE, double retenu_CAFETARIAT, double retenu_AVANCE_SALAIRE, double retenu_ORDINATEUR, Date dateEnregistrement, String mois, long signature, int beta) {
         this.id = id;
         this.idEntreprise = idEntreprise;
         this.idUtilisateur = idUtilisateur;
@@ -57,9 +58,18 @@ public class Fiche implements InterfaceFiche{
         this.retenu_ORDINATEUR = retenu_ORDINATEUR;
         this.dateEnregistrement = dateEnregistrement;
         this.mois = mois;
+        this.signature = signature;
         this.beta = beta;
     }
 
+    public long getSignature() {
+        return signature;
+    }
+    
+    public void setSignature(long signature) {
+        this.signature = signature;
+    }
+    
     public int getIdMonnaie() {
         return idMonnaie;
     }

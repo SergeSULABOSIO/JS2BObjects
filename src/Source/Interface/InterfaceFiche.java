@@ -38,6 +38,7 @@ public interface InterfaceFiche {
     public abstract double getRetenu_ORDINATEUR();
     public abstract Date getDateEnregistrement();
     public abstract String getMois();
+    public abstract long getSignature();
     public abstract int getBeta();  // 0 = Existant, 1 =  Modifié, 2 = Nouveau
     
     public abstract void setId(int id);
@@ -60,6 +61,6 @@ public interface InterfaceFiche {
     public abstract void setRetenu_ORDINATEUR(double ordinateur);
     public abstract void setDateEnregistrement(Date dateEnregistremen);
     public abstract void setMois(String mois);
-
+    public abstract void setSignature(long signature);
     public abstract void setBeta(int newbeta);
 }
