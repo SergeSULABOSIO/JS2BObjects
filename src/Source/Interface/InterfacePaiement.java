@@ -31,6 +31,7 @@ public interface InterfacePaiement {
     public abstract Date getDate();
     public abstract String getReferenceTransaction();
     public abstract int getMode();  // 0=caisse & 1=banque
+    public abstract long getSignature();
     public abstract int getBeta();  // 0 = Existant, 1 =  Modifié, 2 = Nouveau
     
     
@@ -45,6 +46,7 @@ public interface InterfacePaiement {
     public abstract void setDate(Date date);
     public abstract void setReferenceTransaction(String reference);
     public abstract void setMode(int mode); // 0=caisse & 1=banque
+    public abstract void setSignature(long signature); 
     public abstract void setBeta(int newbeta);   
     
     
