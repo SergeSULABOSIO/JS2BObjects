@@ -27,9 +27,10 @@ public class Encaissement implements InterfaceEncaissement{
     public String revenu;
     public int idExercice;
     public int idUtilisateur;
+    public long signature;
     public int beta;
 
-    public Encaissement(int id, int destination, String reference, Date date, double montant, int idMonnaie, String monnaie, String effectuePar, String motif, int idRevenu, String revenu, int idExercice, int idUtilisateur, int beta) {
+    public Encaissement(int id, int destination, String reference, Date date, double montant, int idMonnaie, String monnaie, String effectuePar, String motif, int idRevenu, String revenu, int idExercice, int idUtilisateur, long signature, int beta) {
         this.id = id;
         this.destination = destination;
         this.reference = reference;
@@ -43,13 +44,21 @@ public class Encaissement implements InterfaceEncaissement{
         this.revenu = revenu;
         this.idExercice = idExercice;
         this.idUtilisateur = idUtilisateur;
+        this.signature = signature;
         this.beta = beta;
     }
 
     public Encaissement() {
     }
-    
 
+    public long getSignature() {
+        return signature;
+    }
+
+    public void setSignature(long signature) {
+        this.signature = signature;
+    }
+    
     public int getIdExercice() {
         return idExercice;
     }
