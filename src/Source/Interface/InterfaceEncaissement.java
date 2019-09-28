@@ -34,6 +34,7 @@ public interface InterfaceEncaissement {
     public abstract int getIdExercice();
     public abstract int getIdUtilisateur();
     public abstract String getRevenu();
+    public abstract long getSignature();
     public abstract int getBeta();
     
     public abstract void setId(int id);
@@ -49,6 +50,7 @@ public interface InterfaceEncaissement {
     public abstract void setRevenu(String revenu);
     public abstract void setIdExercice(int idExercice);
     public abstract void setIdUtilisateur(int idUtilisateur);
+    public abstract void setSignature(long signature);
     public abstract void setBeta(int newBeta);
 }
 
