@@ -34,6 +34,7 @@ public interface InterfaceDecaissement {
     public abstract String getCharge();
     public abstract int getIdUtilisateur();
     public abstract int getIdExercice();
+    public abstract long getSignature();
     public abstract int getBeta();
     
     public abstract void setId(int id);
@@ -49,6 +50,7 @@ public interface InterfaceDecaissement {
     public abstract void setCharge(String charge);
     public abstract void setIdExercice(int idExercice);
     public abstract void setIdUtilisateur(int idUtilisateur);
+    public abstract void setSignature(long signature);
     public abstract void setBeta(int newBeta);
 }
 
