@@ -31,7 +31,7 @@ public class Frais implements InterfaceFrais{
     public Vector<LiaisonFraisClasse> liaisonsClasses = new Vector<LiaisonFraisClasse>();
     public Vector<LiaisonFraisPeriode> liaisonsPeriodes = new Vector<LiaisonFraisPeriode>();
     public int beta;
-
+    
     public Frais(int id, int idUtilisateur, int idEntreprise, int idExercice, int idMonnaie, long signatureMonnaie, long signature, String nom, String monnaie, int nbTranches, Vector<LiaisonFraisClasse> liaisonsClasses, Vector<LiaisonFraisPeriode> liaisonsPeriodes, double montantDefaut, int beta) {
         this.id = id;
         this.idUtilisateur = idUtilisateur;
@@ -211,3 +211,4 @@ public class Frais implements InterfaceFrais{
         return "Frais{" + "id=" + id + ", idUtilisateur=" + idUtilisateur + ", idEntreprise=" + idEntreprise + ", idExercice=" + idExercice + ", idMonnaie=" + idMonnaie + ", montantDefaut=" + montantDefaut + ", nom=" + nom + ", monnaie=" + monnaie + ", signatureMonnaie=" + signatureMonnaie + ", signature=" + signature + ", liaisonsClasses=" + liaisonsClasses + ", liaisonsPeriodes=" + liaisonsPeriodes + ", beta=" + beta + '}';
     }
 }
+

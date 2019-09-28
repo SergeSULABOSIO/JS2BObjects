@@ -22,22 +22,32 @@ public class Exercice implements InterfaceExercice{
     public String nom;
     public Date debut;
     public Date fin;
+    public long signature;
     public int beta;
 
-    public Exercice(int id, int idEntreprise, int idUtilisateur, String nom, Date debut, Date fin, int beta) {
+    public Exercice(int id, int idEntreprise, int idUtilisateur, String nom, Date debut, Date fin, long signature, int beta) {
         this.id = id;
         this.idEntreprise = idEntreprise;
         this.idUtilisateur = idUtilisateur;
         this.nom = nom;
         this.debut = debut;
         this.fin = fin;
+        this.signature = signature;
         this.beta = beta;
     }
 
     public Exercice() {
     }
-    
 
+    public long getSignature() {
+        return signature;
+    }
+
+    public void setSignature(long signature) {
+        this.signature = signature;
+    }
+    
+    
     public int getBeta() {
         return beta;
     }
@@ -98,8 +108,15 @@ public class Exercice implements InterfaceExercice{
 
     @Override
     public String toString() {
-        return "XX_Exercice{" + "id=" + id + ", idEntreprise=" + idEntreprise + ", idUtilisateur=" + idUtilisateur + ", nom=" + nom + ", debut=" + debut + ", fin=" + fin + '}';
+        return "Exercice{" + "id=" + id + ", idEntreprise=" + idEntreprise + ", idUtilisateur=" + idUtilisateur + ", nom=" + nom + ", debut=" + debut + ", fin=" + fin + ", signature=" + signature + ", beta=" + beta + '}';
     }
-    
 }
+
+
+
+
+
+
+
+
 

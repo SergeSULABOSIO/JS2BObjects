@@ -21,9 +21,10 @@ public class Revenu implements InterfaceRevenu{
     public String nom;
     public String monnaie;
     public double volumeAnnuel;
+    public long signature;
     public int beta;
 
-    public Revenu(int id, int idEntreprise, int idUtilisateur, int idExercice, int idMonnaie, long signatureMonnaie, String nom, String monnaie, double volumeAnnuel, int beta) {
+    public Revenu(int id, int idEntreprise, int idUtilisateur, int idExercice, int idMonnaie, long signatureMonnaie, String nom, String monnaie, double volumeAnnuel, long signature, int beta) {
         this.id = id;
         this.idEntreprise = idEntreprise;
         this.idUtilisateur = idUtilisateur;
@@ -33,10 +34,19 @@ public class Revenu implements InterfaceRevenu{
         this.monnaie = monnaie;
         this.signatureMonnaie = signatureMonnaie;
         this.volumeAnnuel = volumeAnnuel;
+        this.signature = signature;
         this.beta = beta;
     }
 
     public Revenu() {
+    }
+
+    public long getSignature() {
+        return signature;
+    }
+
+    public void setSignature(long signature) {
+        this.signature = signature;
     }
     
     
@@ -126,7 +136,13 @@ public class Revenu implements InterfaceRevenu{
 
     @Override
     public String toString() {
-        return "XX_Revenu{" + "id=" + id + ", idEntreprise=" + idEntreprise + ", idUtilisateur=" + idUtilisateur + ", idExercice=" + idExercice + ", idMonnaie=" + idMonnaie + ", signatureMonnaie=" + signatureMonnaie + ", nom=" + nom + ", monnaie=" + monnaie + '}';
+        return "Revenu{" + "id=" + id + ", idEntreprise=" + idEntreprise + ", idUtilisateur=" + idUtilisateur + ", idExercice=" + idExercice + ", idMonnaie=" + idMonnaie + ", signatureMonnaie=" + signatureMonnaie + ", nom=" + nom + ", monnaie=" + monnaie + ", volumeAnnuel=" + volumeAnnuel + ", signature=" + signature + ", beta=" + beta + '}';
     }
-
 }
+
+
+
+
+
+
+

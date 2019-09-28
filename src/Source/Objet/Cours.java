@@ -25,9 +25,10 @@ public class Cours implements InterfaceCours{
     public String classe;
     public long signatureClasse;
     public int idClasse;
+    public long signature;
     public int beta;
 
-    public Cours(int id, int idEntreprise, int idUtilisateur, int idExercice, String nom, String enseignant, long signatureEnseignant, int idEnseignant, String classe, long signatureClasse, int idClasse, int beta) {
+    public Cours(int id, int idEntreprise, int idUtilisateur, int idExercice, String nom, String enseignant, long signatureEnseignant, int idEnseignant, String classe, long signatureClasse, int idClasse, long signature, int beta) {
         this.id = id;
         this.idEntreprise = idEntreprise;
         this.idUtilisateur = idUtilisateur;
@@ -39,14 +40,23 @@ public class Cours implements InterfaceCours{
         this.classe = classe;
         this.signatureClasse = signatureClasse;
         this.idClasse = idClasse;
+        this.signature = signature;
         this.beta = beta;
     }
 
     public Cours() {
+        
+    }
+
+    public long getSignature() {
+        return signature;
+    }
+
+    public void setSignature(long signature) {
+        this.signature = signature;
     }
     
     
-
     public int getBeta() {
         return beta;
     }
@@ -147,8 +157,17 @@ public class Cours implements InterfaceCours{
 
     @Override
     public String toString() {
-        return "XX_Cours{" + "id=" + id + ", idEntreprise=" + idEntreprise + ", idUtilisateur=" + idUtilisateur + ", idExercice=" + idExercice + ", nom=" + nom + ", enseignant=" + enseignant + ", signatureEnseignant=" + signatureEnseignant + ", idEnseignant=" + idEnseignant + ", classe=" + classe + ", signatureClasse=" + signatureClasse + ", idClasse=" + idClasse + '}';
+        return "Cours{" + "id=" + id + ", idEntreprise=" + idEntreprise + ", idUtilisateur=" + idUtilisateur + ", idExercice=" + idExercice + ", nom=" + nom + ", enseignant=" + enseignant + ", signatureEnseignant=" + signatureEnseignant + ", idEnseignant=" + idEnseignant + ", classe=" + classe + ", signatureClasse=" + signatureClasse + ", idClasse=" + idClasse + ", signature=" + signature + ", beta=" + beta + '}';
     }
-    
-    
 }
+
+
+
+
+
+
+
+
+
+
+

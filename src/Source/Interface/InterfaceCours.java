@@ -30,6 +30,7 @@ public interface InterfaceCours {
     
     public abstract String getClasse();
     public abstract long getSignatureClasse();
+    public abstract long getSignature();
     public abstract int getIdClasse();
     
     //Les setters
@@ -44,7 +45,12 @@ public interface InterfaceCours {
     public abstract void setSignatureEnseignant(long signature);
     public abstract void setIdEnseignant(int idEnseignant);
     public abstract void setClasse(String classe);
+    public abstract void setSignature(long signature);
     public abstract void setSignatureClasse(long signature);
     public abstract void setIdClasse(int idClasse);
     public abstract void setBeta(int newbeta);
 }
+
+
+
+

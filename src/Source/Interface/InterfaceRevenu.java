@@ -24,6 +24,7 @@ public interface InterfaceRevenu {
     public abstract String getNom();
     public abstract String getMonnaie();
     public abstract double getVolumeAnnuel();
+    public abstract long getSignature();
     public abstract int getBeta();  // 0 = Existant, 1 =  Modifié, 2 = Nouveau
     
     public abstract void setId(int id);
@@ -35,5 +36,10 @@ public interface InterfaceRevenu {
     public abstract void setNom(String nom);
     public abstract void setMonnaie(String monnaie);
     public abstract void setVolumeAnnuel(double volume);
+    public abstract void setSignature(long signature);
     public abstract void setBeta(int newbeta);
 }
+
+
+
+

@@ -9,7 +9,13 @@ package Source.Callbacks;
  *
  * @author HP Pavilion
  */
-public abstract class EcouteurSuppressionElement {
 
-    public abstract void onSuppressionConfirmee(int idElement, long signature);
+
+public abstract class EcouteurStandard {
+    public abstract void onDone(String message);
+    public abstract void onError(String message);
+    public abstract void onProcessing(String message);
 }
+
+
+

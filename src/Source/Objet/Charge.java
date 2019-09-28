@@ -23,9 +23,10 @@ public class Charge implements InterfaceCharge{
     public int idMonnaie;
     public long signatureMonnaie;
     public String monnaie;
+    public long signature;
     public int beta;
 
-    public Charge(int id, int idEntreprise, int idUtilisateur, int idExercice, String nom, double limiteAnnuelle, int idMonnaie, long signatureMonnaie, String monnaie, int beta) {
+    public Charge(int id, int idEntreprise, int idUtilisateur, int idExercice, String nom, double limiteAnnuelle, int idMonnaie, long signatureMonnaie, String monnaie, long signature, int beta) {
         this.id = id;
         this.idEntreprise = idEntreprise;
         this.idUtilisateur = idUtilisateur;
@@ -36,9 +37,18 @@ public class Charge implements InterfaceCharge{
         this.monnaie = monnaie;
         this.signatureMonnaie = signatureMonnaie;
         this.beta = beta;
+        this.signature = signature;
     }
 
     public Charge() {
+    }
+
+    public long getSignature() {
+        return signature;
+    }
+
+    public void setSignature(long signature) {
+        this.signature = signature;
     }
     
     
@@ -125,7 +135,16 @@ public class Charge implements InterfaceCharge{
 
     @Override
     public String toString() {
-        return "XXX_Charge{" + "id=" + id + ", idEntreprise=" + idEntreprise + ", idUtilisateur=" + idUtilisateur + ", idExercice=" + idExercice + ", nom=" + nom + ", limiteAnnuelle=" + limiteAnnuelle + ", idMonnaie=" + idMonnaie + ", signatureMonnaie=" + signatureMonnaie + ", monnaie=" + monnaie + '}';
+        return "Charge{" + "id=" + id + ", idEntreprise=" + idEntreprise + ", idUtilisateur=" + idUtilisateur + ", idExercice=" + idExercice + ", nom=" + nom + ", limiteAnnuelle=" + limiteAnnuelle + ", idMonnaie=" + idMonnaie + ", signatureMonnaie=" + signatureMonnaie + ", monnaie=" + monnaie + ", signature=" + signature + ", beta=" + beta + '}';
     }
-    
 }
+
+
+
+
+
+
+
+
+
+

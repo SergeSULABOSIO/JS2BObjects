@@ -23,6 +23,7 @@ public interface InterfaceExercice {
     public abstract String getNom();
     public abstract Date getDebut();
     public abstract Date getFin();
+    public abstract long getSignature();
     public abstract int getBeta();  // 0 = Existant, 1 =  Modifié, 2 = Nouveau
     
     public abstract void setId(int id);
@@ -31,5 +32,12 @@ public interface InterfaceExercice {
     public abstract void setNom(String nom);
     public abstract void setDebut(Date dateDebut);
     public abstract void setFin(Date dateFin);
+    public abstract void setSignature(long signature);
     public abstract void setBeta(int newbeta);
 }
+
+
+
+
+
+

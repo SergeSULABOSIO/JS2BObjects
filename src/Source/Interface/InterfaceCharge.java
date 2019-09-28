@@ -21,6 +21,7 @@ public interface InterfaceCharge {
     public abstract int getIdExercice();
     public abstract int getIdMonnaie();
     public abstract long getSignatureMonnaie();
+    public abstract long getSignature();
     public abstract String getNom();
     public abstract String getMonnaie();
     public abstract double getLimiteAnnuelle();
@@ -35,5 +36,11 @@ public interface InterfaceCharge {
     public abstract void setMonnaie(String monnaie);
     public abstract void setNom(String nom);
     public abstract void setLimiteAnnuelle(double limite);
+    public abstract void setSignature(long signature);
     public abstract void setBeta(int newbeta);
 }
+
+
+
+
+
