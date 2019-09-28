@@ -25,12 +25,13 @@ public class Paiement implements InterfacePaiement{
     public String nomDepositaire;
     public double montant;
     public Date date;
+    public long signature;
     public int beta;
 
     public Paiement() {
     }
 
-    public Paiement(int id, int idExercice, int idEleve, int idFrais, int idPeriode, String nomEleve, String nomFrais, String nomDepositaire, double montant, Date date, int mode, String reference, int beta) {
+    public Paiement(int id, int idExercice, int idEleve, int idFrais, int idPeriode, String nomEleve, String nomFrais, String nomDepositaire, double montant, Date date, int mode, String reference, long signature, int beta) {
         this.id = id;
         this.idExercice = idExercice;
         this.idEleve = idEleve;
@@ -43,8 +44,19 @@ public class Paiement implements InterfacePaiement{
         this.date = date;
         this.mode = mode;
         this.reference = reference;
+        this.signature = signature;
         this.beta = beta;
     }
+
+    public long getSignature() {
+        return signature;
+    }
+
+    public void setSignature(long signature) {
+        this.signature = signature;
+    }
+    
+    
 
     public int getIdPeriode() {
         return idPeriode;
