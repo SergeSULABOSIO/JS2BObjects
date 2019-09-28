@@ -26,9 +26,10 @@ public class Decaissement implements InterfaceDecaissement{
     public String charge;
     public int idExercice;
     public int idUtilisateur;
+    public long signature;
     public int beta;
 
-    public Decaissement(int id, int source, String reference, Date date, double montant, int idMonnaie, String monnaie, String beneficiaire, String motif, int idCharge, String charge, int idExercice, int idUtilisateur, int beta) {
+    public Decaissement(int id, int source, String reference, Date date, double montant, int idMonnaie, String monnaie, String beneficiaire, String motif, int idCharge, String charge, int idExercice, int idUtilisateur, long signature, int beta) {
         this.id = id;
         this.source = source;
         this.reference = reference;
@@ -42,14 +43,21 @@ public class Decaissement implements InterfaceDecaissement{
         this.charge = charge;
         this.idExercice = idExercice;
         this.idUtilisateur = idUtilisateur;
+        this.signature = signature;
         this.beta = beta;
     }
 
     public Decaissement() {
     }
-    
-    
 
+    public long getSignature() {
+        return signature;
+    }
+
+    public void setSignature(long signature) {
+        this.signature = signature;
+    }
+    
     public int getIdExercice() {
         return idExercice;
     }
