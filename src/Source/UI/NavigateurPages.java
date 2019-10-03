@@ -49,6 +49,7 @@ public class NavigateurPages extends javax.swing.JPanel {
     }
 
     public String toStringCriteres() {
+        //Rien à signaler
         String txt = "";
         if (dialog != null) {
             if (dialog.panProp != null) {
