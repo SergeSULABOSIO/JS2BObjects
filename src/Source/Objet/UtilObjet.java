@@ -24,7 +24,7 @@ public class UtilObjet {
     public static String DOSSIER_CHARGE = "CHARGE";
     public static String DOSSIER_FRAIS = "FRAIS";
     public static String DOSSIER_ELEVE = "ELEVE";
-    public static String DOSSIER_AYANT_DROIT = "AYANT_DROIT";
+    public static String DOSSIER_AYANT_DROIT = "AYANTDROIT";
     public static String DOSSIER_PAIEMENT = "PAIEMENT";
     public static String DOSSIER_ENCAISSEMENT = "ENCAISSEMENT";
     public static String DOSSIER_DECAISSEMENT = "DECAISSEMENT";
