@@ -24,6 +24,7 @@ public interface InterfacePaiement {
     public abstract int getIdEleve();
     public abstract int getIdFrais();
     public abstract int getIdExercice();
+    public abstract int getIdEntreprise();
     public abstract int getIdPeriode();
     public abstract String getNomEleve();
     public abstract String getNomFrais();
@@ -37,6 +38,7 @@ public interface InterfacePaiement {
     
     public abstract void setId(int id);
     public abstract void setIdExercice(int idExercice);
+    public abstract void setIdEntreprise(int idEntreprise);
     public abstract void setIdEleve(int idEleve);
     public abstract void setIdFrais(int idArticle);
     public abstract void setIdPeriode(int idPeriode);
@@ -51,6 +53,11 @@ public interface InterfacePaiement {
     
     
 }
+
+
+
+
+
 
 
 

@@ -16,6 +16,7 @@ public class Paiement implements InterfacePaiement{
     public int id;
     public int idEleve;
     public int idExercice;
+    public int idEntreprise;
     public int idFrais;
     public int idPeriode;
     public int mode;
@@ -31,7 +32,7 @@ public class Paiement implements InterfacePaiement{
     public Paiement() {
     }
 
-    public Paiement(int id, int idExercice, int idEleve, int idFrais, int idPeriode, String nomEleve, String nomFrais, String nomDepositaire, double montant, Date date, int mode, String reference, long signature, int beta) {
+    public Paiement(int id, int idExercice, int idEntreprise, int idEleve, int idFrais, int idPeriode, String nomEleve, String nomFrais, String nomDepositaire, double montant, Date date, int mode, String reference, long signature, int beta) {
         this.id = id;
         this.idExercice = idExercice;
         this.idEleve = idEleve;
@@ -40,6 +41,7 @@ public class Paiement implements InterfacePaiement{
         this.nomEleve = nomEleve;
         this.nomFrais = nomFrais;
         this.nomDepositaire = nomDepositaire;
+        this.idEntreprise = idEntreprise;
         this.montant = montant;
         this.date = date;
         this.mode = mode;
@@ -48,6 +50,14 @@ public class Paiement implements InterfacePaiement{
         this.beta = beta;
     }
 
+    public int getIdEntreprise() {
+        return idEntreprise;
+    }
+
+    public void setIdEntreprise(int idEntreprise) {
+        this.idEntreprise = idEntreprise;
+    }
+    
     public long getSignature() {
         return signature;
     }
@@ -180,6 +190,16 @@ public class Paiement implements InterfacePaiement{
 
     @Override
     public String toString() {
-        return "Paiement{" + "id=" + id + ", idEleve=" + idEleve + ", idExercice=" + idExercice + ", idFrais=" + idFrais + ", idPeriode=" + idPeriode + ", mode=" + mode + ", reference=" + reference + ", nomEleve=" + nomEleve + ", nomFrais=" + nomFrais + ", nomDepositaire=" + nomDepositaire + ", montant=" + montant + ", date=" + date + ", beta=" + beta + '}';
+        return "Paiement{" + "id=" + id + ", idEleve=" + idEleve + ", idExercice=" + idExercice + ", idEntreprise=" + idEntreprise + ", idFrais=" + idFrais + ", idPeriode=" + idPeriode + ", mode=" + mode + ", reference=" + reference + ", nomEleve=" + nomEleve + ", nomFrais=" + nomFrais + ", nomDepositaire=" + nomDepositaire + ", montant=" + montant + ", date=" + date + ", signature=" + signature + ", beta=" + beta + '}';
     }
 }
+
+
+
+
+
+
+
+
+
+
