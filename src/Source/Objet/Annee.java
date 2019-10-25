@@ -5,8 +5,8 @@
  */
 package Source.Objet;
 
-import Source.Interface.InterfaceExercice;
 import java.util.Date;
+import Source.Interface.InterfaceAnnee;
 
 
 
@@ -14,7 +14,7 @@ import java.util.Date;
  *
  * @author HP Pavilion
  */
-public class Exercice implements InterfaceExercice{
+public class Annee implements InterfaceAnnee{
     
     public int id;
     public int idEntreprise;
@@ -25,7 +25,7 @@ public class Exercice implements InterfaceExercice{
     public long signature;
     public int beta;
 
-    public Exercice(int id, int idEntreprise, int idUtilisateur, String nom, Date debut, Date fin, long signature, int beta) {
+    public Annee(int id, int idEntreprise, int idUtilisateur, String nom, Date debut, Date fin, long signature, int beta) {
         this.id = id;
         this.idEntreprise = idEntreprise;
         this.idUtilisateur = idUtilisateur;
@@ -36,7 +36,7 @@ public class Exercice implements InterfaceExercice{
         this.beta = beta;
     }
 
-    public Exercice() {
+    public Annee() {
     }
 
     public long getSignature() {

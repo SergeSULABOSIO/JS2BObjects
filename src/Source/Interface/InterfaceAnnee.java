@@ -11,7 +11,7 @@ import java.util.Date;
  *
  * @author HP Pavilion
  */
-public interface InterfaceExercice {
+public interface InterfaceAnnee {
     //Conatantes - BETA
     public static final int BETA_EXISTANT = 0;
     public static final int BETA_MODIFIE = 1;
