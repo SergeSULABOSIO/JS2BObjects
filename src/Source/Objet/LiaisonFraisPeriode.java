@@ -61,7 +61,7 @@ public class LiaisonFraisPeriode {
 
     @Override
     public String toString() {
-        return "LiaisonPeriodeFrais{" + "idPeriode=" + idPeriode + ", nomPeriode=" + nomPeriode + ", signaturePeriode=" + signaturePeriode + ", pourcentage=" + pourcentage + '}';
+        return "LiaisonFraisPeriode{" + "idPeriode=" + idPeriode + ", nomPeriode=" + nomPeriode + ", signaturePeriode=" + signaturePeriode + ", pourcentage=" + pourcentage + '}';
     }
 }
 
