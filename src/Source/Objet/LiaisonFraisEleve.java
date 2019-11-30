@@ -82,5 +82,4 @@ public class LiaisonFraisEleve {
     public String toString() {
         return "LiaisonFraisEleve{" + "signatureEleve=" + signatureEleve + ", signatureFrais=" + signatureFrais + ", idFrais=" + idFrais + ", montant=" + montant + ", idMonnaie=" + idMonnaie + ", monnaie=" + monnaie + '}';
     }
-    
 }

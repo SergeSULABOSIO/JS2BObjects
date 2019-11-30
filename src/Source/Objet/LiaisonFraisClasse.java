@@ -62,7 +62,7 @@ public class LiaisonFraisClasse {
 
     @Override
     public String toString() {
-        return "LiaisonClasseFrais{" + "idClasse=" + idClasse + ", nomClasse=" + nomClasse + ", signatureClasse=" + signatureClasse + ", montant=" + montant + '}';
+        return "LiaisonFraisClasse{" + "idClasse=" + idClasse + ", nomClasse=" + nomClasse + ", signatureClasse=" + signatureClasse + ", montant=" + montant + '}';
     }
 }
 
