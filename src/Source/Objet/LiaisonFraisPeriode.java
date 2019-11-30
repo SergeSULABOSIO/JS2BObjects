@@ -10,10 +10,10 @@ package Source.Objet;
  * @author HP Pavilion
  */
 public class LiaisonFraisPeriode {
-    private int idPeriode;
-    private String nomPeriode;
-    private long signaturePeriode;
-    private double pourcentage;
+    public int idPeriode;
+    public String nomPeriode;
+    public long signaturePeriode;
+    public double pourcentage;
 
     public LiaisonFraisPeriode() {
     }
