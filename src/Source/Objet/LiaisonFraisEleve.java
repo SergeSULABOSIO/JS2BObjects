@@ -10,12 +10,12 @@ package Source.Objet;
  * @author HP Pavilion
  */
 public class LiaisonFraisEleve {
-    private long signatureEleve;
-    private long signatureFrais;
-    private int idFrais;
-    private double montant;
-    private int idMonnaie;
-    private String monnaie;
+    public long signatureEleve;
+    public long signatureFrais;
+    public int idFrais;
+    public double montant;
+    public int idMonnaie;
+    public String monnaie;
 
     public LiaisonFraisEleve(long signatureEleve, long signatureFrais, int idFrais, double montant, int idMonnaie, String monnaie) {
         this.signatureEleve = signatureEleve;

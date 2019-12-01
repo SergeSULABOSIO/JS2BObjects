@@ -10,10 +10,10 @@ package Source.Objet;
  * @author HP Pavilion
  */
 public class LiaisonFraisClasse {
-    private int idClasse;
-    private String nomClasse;
-    private long signatureClasse;
-    private double montant;
+    public int idClasse;
+    public String nomClasse;
+    public long signatureClasse;
+    public double montant;
 
     public LiaisonFraisClasse() {
     }
