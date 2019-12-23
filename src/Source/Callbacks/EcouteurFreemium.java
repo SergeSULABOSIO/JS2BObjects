@@ -15,8 +15,10 @@ package Source.Callbacks;
  */
 public abstract class EcouteurFreemium {
     public abstract boolean onVerifie();
-    public abstract boolean onVerifieNombre(Class classe);
+    public abstract boolean onVerifieNombre(String nomTable);
 }
+
+
 
 
 
