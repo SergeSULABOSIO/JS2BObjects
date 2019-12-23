@@ -14,7 +14,6 @@ import Source.Objet.Eleve;
  * @author HP Pavilion
  */
 public abstract class EcouteurCrossCanal {
-    
     public abstract void onOuvrirPaiements(Eleve eleve);
     public abstract void onOuvrirInscription(Eleve eleve);
     public abstract void onOuvrirLitiges(Eleve eleve);
