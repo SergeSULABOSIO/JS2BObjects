@@ -20,6 +20,9 @@ import javax.swing.JOptionPane;
  * @author user
  */
 public class UtilObjet {
+    public static String nomApplication = "S2BFees";
+    public static String pageWeb = "http://www.visiterlardc.com/s2b";
+    
     public static String DOSSIER_ANNEE = "ANNEE";
     public static String DOSSIER_MONNAIE = "MONNAIE";
     public static String DOSSIER_CLASSE = "CLASSE";
@@ -118,6 +121,7 @@ public class UtilObjet {
     
     
 }
+
 
 
 
