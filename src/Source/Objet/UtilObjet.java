@@ -20,9 +20,10 @@ import javax.swing.JOptionPane;
  * @author user
  */
 public class UtilObjet {
+
     public static String nomApplication = "S2BFees";
     public static String pageWeb = "http://www.visiterlardc.com/s2b";
-    
+
     public static String DOSSIER_ANNEE = "ANNEE";
     public static String DOSSIER_MONNAIE = "MONNAIE";
     public static String DOSSIER_CLASSE = "CLASSE";
@@ -38,7 +39,7 @@ public class UtilObjet {
     public static String DOSSIER_ENCAISSEMENT = "ENCAISSEMENT";
     public static String DOSSIER_DECAISSEMENT = "DECAISSEMENT";
     public static String DOSSIER_FICHE_DE_PAIE = "FICHE_PAIE";
-    
+
     //Les actions web
     public static int ACTION_LISTER_UTILISATEUR = 100;
     public static int ACTION_PAYER_LICENCE = 200;
@@ -46,7 +47,7 @@ public class UtilObjet {
     public static int ACTION_MODIFIER_INFO_ECOLE = 400;
     public static int ACTION_MODIFIER_ARCHIVES = 500;
     public static int ACTION_HOME_PAGE = 0;
-    
+
     public static boolean lancerPageWebAdmin(JFrame parent, Utilisateur utilisateur, Entreprise entreprise, int action, Icon iconeAlarme) {
         boolean go = false;
         Utilisateur user = utilisateur;
@@ -85,8 +86,22 @@ public class UtilObjet {
         }
         return false;
     }
-    
-    
+
+    public static boolean lancerPagePaiementEnLigne(Utilisateur user, Entreprise ense) {
+        //http://www.visiterlardc.com/s2b/redirection.php?action=100&email=sulabosiog@gmail.com&motdepasse=abc&idEntreprise=2
+        String parametres = "/redirection.php?action=" + ACTION_PAYER_LICENCE + "&email=" + user.getEmail() + "&motdepasse=" + user.getMotDePasse() + "&idEntreprise=" + ense.getId();
+        Desktop desktop = Desktop.isDesktopSupported() ? Desktop.getDesktop() : null;
+        if (desktop != null && desktop.isSupported(Desktop.Action.BROWSE)) {
+            try {
+                desktop.browse(new URL(pageWeb + parametres).toURI());
+                return true;
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+        return true;
+    }
+
     public static String getDateFrancais(Date date) {
         String dateS = "";
         try {
@@ -99,13 +114,13 @@ public class UtilObjet {
 
         return dateS;
     }
-    
-    public static long getSignature(){
-      Random randomno = new Random();
-      long value = randomno.nextLong();
-      return value;
+
+    public static long getSignature() {
+        Random randomno = new Random();
+        long value = randomno.nextLong();
+        return value;
     }
-    
+
     public static String getDateAnglais(Date date) {
         String dateS = "";
         try {
@@ -118,37 +133,8 @@ public class UtilObjet {
 
         return dateS;
     }
-    
-    
+
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
