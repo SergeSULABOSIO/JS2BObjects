@@ -47,7 +47,7 @@ public class UtilObjet {
     public static int ACTION_MODIFIER_ARCHIVES = 500;
     public static int ACTION_HOME_PAGE = 0;
     
-    public static boolean lancerPageWebAdmin(JFrame parent, String pageWeb, Utilisateur utilisateur, Entreprise entreprise, int action, Icon iconeAlarme) {
+    public static boolean lancerPageWebAdmin(JFrame parent, Utilisateur utilisateur, Entreprise entreprise, int action, Icon iconeAlarme) {
         boolean go = false;
         Utilisateur user = utilisateur;
         if (entreprise != null && utilisateur != null) {
@@ -121,6 +121,7 @@ public class UtilObjet {
     
     
 }
+
 
 
 
