@@ -102,7 +102,7 @@ public class UtilObjet {
 
     public static boolean lancerPagePaiementEnLigne(Utilisateur user, Entreprise ense) {
         //http://www.visiterlardc.com/s2b/redirection.php?action=100&email=sulabosiog@gmail.com&motdepasse=abc&idEntreprise=2
-        String parametres = "/redirection.php?action=" + ACTION_PAYER_LICENCE + "&email=" + user.getEmail() + "&motdepasse=" + user.getMotDePasse() + "&idEntreprise=" + ense.getId();
+        String parametres = "/redirection.php?action=" + ACTION_PAYER_LICENCE + "&email=" + encoderValeur(user.getEmail()) + "&motdepasse=" + encoderValeur(user.getMotDePasse()) + "&idEntreprise=" + ense.getId();
         Desktop desktop = Desktop.isDesktopSupported() ? Desktop.getDesktop() : null;
         if (desktop != null && desktop.isSupported(Desktop.Action.BROWSE)) {
             try {
