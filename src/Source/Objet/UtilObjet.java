@@ -7,6 +7,7 @@ package Source.Objet;
 
 import Source.Interface.InterfaceUtilisateur;
 import java.awt.Desktop;
+import java.net.URI;
 import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.util.Date;
