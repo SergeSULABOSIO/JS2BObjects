@@ -7,8 +7,11 @@ package Source.Objet;
 
 import Source.Interface.InterfaceUtilisateur;
 import java.awt.Desktop;
+import java.io.UnsupportedEncodingException;
 import java.net.URI;
 import java.net.URL;
+import java.net.URLEncoder;
+import java.nio.charset.StandardCharsets;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Random;
@@ -71,7 +74,7 @@ public class UtilObjet {
 
         if (go == true) {
             //http://www.visiterlardc.com/s2b/redirection.php?action=100&email=sulabosiog@gmail.com&motdepasse=abc&idEntreprise=2
-            String parametres = "/redirection.php?action=" + action + "&email=" + user.getEmail() + "&motdepasse=" + user.getMotDePasse() + "&idEntreprise=" + entreprise.getId();
+            String parametres = "/redirection.php?action=" + action + "&email=" + encoderValeur(user.getEmail()) + "&motdepasse=" + encoderValeur(user.getMotDePasse()) + "&idEntreprise=" + entreprise.getId();
             Desktop desktop = Desktop.isDesktopSupported() ? Desktop.getDesktop() : null;
             if (desktop != null && desktop.isSupported(Desktop.Action.BROWSE)) {
                 try {
@@ -86,6 +89,15 @@ public class UtilObjet {
                     + "\nSi vous désirez élargir vos droits d'accès, merci de s'adresser à votre administrateur.", "Pas d'accès", JOptionPane.ERROR_MESSAGE, iconeAlarme);
         }
         return false;
+    }
+    
+    private static String encoderValeur(String value) {
+        try {
+            return URLEncoder.encode(value, StandardCharsets.UTF_8.toString());
+        } catch (UnsupportedEncodingException ex) {
+            ex.printStackTrace();
+            return null;
+        }
     }
 
     public static boolean lancerPagePaiementEnLigne(Utilisateur user, Entreprise ense) {
