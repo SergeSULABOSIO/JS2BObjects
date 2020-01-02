@@ -12,7 +12,7 @@ import java.util.Date;
  *
  * @author HP Pavilion
  */
-public class Fiche implements InterfaceFiche{
+public class Fiche_paie implements InterfaceFiche{
     
     public int id;
     public int idEntreprise;
@@ -37,7 +37,7 @@ public class Fiche implements InterfaceFiche{
     public long signature;
     public int beta;
 
-    public Fiche(int id, int idEntreprise, int idUtilisateur, int idExercice, int idMonnaie, int idAgent, int categorieAgent, double salaireBase, double transport, double logement, double autresGains, double retenu_IPR, double retenu_INSS, double retenu_SYNDICAT, double retenu_ABSENCE, double retenu_CAFETARIAT, double retenu_AVANCE_SALAIRE, double retenu_ORDINATEUR, Date dateEnregistrement, String mois, long signature, int beta) {
+    public Fiche_paie(int id, int idEntreprise, int idUtilisateur, int idExercice, int idMonnaie, int idAgent, int categorieAgent, double salaireBase, double transport, double logement, double autresGains, double retenu_IPR, double retenu_INSS, double retenu_SYNDICAT, double retenu_ABSENCE, double retenu_CAFETARIAT, double retenu_AVANCE_SALAIRE, double retenu_ORDINATEUR, Date dateEnregistrement, String mois, long signature, int beta) {
         this.id = id;
         this.idEntreprise = idEntreprise;
         this.idUtilisateur = idUtilisateur;
@@ -97,7 +97,7 @@ public class Fiche implements InterfaceFiche{
         this.retenu_SYNDICAT = retenu_SYNDICAT;
     }
 
-    public Fiche() {
+    public Fiche_paie() {
     }
 
     public int getId() {
