@@ -10,6 +10,12 @@ package Source.Callbacks;
  * @author HP Pavilion
  */
 public abstract class EcouteurSuppressionElement {
-
-    public abstract void onSuppressionConfirmee(int idElement, long signature);
+    public abstract void onDeletionComplete(int idElement, long signature);
+    public abstract boolean onCanDelete(int idElement, long signature);
 }
+
+
+
+
+
+
