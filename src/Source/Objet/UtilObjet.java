@@ -25,7 +25,7 @@ import javax.swing.JOptionPane;
  */
 public class UtilObjet {
 
-    public static String nomApplication = "S2BFees";
+    public static String nomApplication = "[e]-Kelasi";
     public static String pageWeb = "http://www.visiterlardc.com/s2b";
 
     public static String DOSSIER_ANNEE = "ANNEE";
