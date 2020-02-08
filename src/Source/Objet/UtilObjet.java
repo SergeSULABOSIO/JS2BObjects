@@ -43,6 +43,8 @@ public class UtilObjet {
     public static String DOSSIER_ENCAISSEMENT = "ENCAISSEMENT";
     public static String DOSSIER_DECAISSEMENT = "DECAISSEMENT";
     public static String DOSSIER_FICHE_DE_PAIE = "FICHE_PAIE";
+    public static String SYSTEM_USER_HOME = System.getProperty("user.home");
+    public static String SYSTEM_FICHIER_OUTPUT_PDF = SYSTEM_USER_HOME + "/Output.pdf";
 
     //Les actions web
     public static int ACTION_LISTER_UTILISATEUR = 100;
