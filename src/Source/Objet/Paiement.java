@@ -15,8 +15,8 @@ import java.util.Date;
 public class Paiement implements InterfacePaiement{
     public int id;
     public int idEleve;
-    public int idExercice;
     public int idEntreprise;
+    public int idExercice;
     public int idFrais;
     public int idPeriode;
     public int mode;
@@ -29,25 +29,29 @@ public class Paiement implements InterfacePaiement{
     public long signature;
     public int beta;
 
-    public Paiement() {
-    }
-
-    public Paiement(int id, int idExercice, int idEntreprise, int idEleve, int idFrais, int idPeriode, String nomEleve, String nomFrais, String nomDepositaire, double montant, Date date, int mode, String reference, long signature, int beta) {
+    
+    public Paiement(int id, int idEleve, int idEntreprise, int idExercice, int idFrais, int idPeriode, int mode, String reference, String nomEleve, String nomFrais, String nomDepositaire, double montant, Date date, long signature, int beta) {
         this.id = id;
-        this.idExercice = idExercice;
         this.idEleve = idEleve;
+        this.idEntreprise = idEntreprise;
+        this.idExercice = idExercice;
         this.idFrais = idFrais;
         this.idPeriode = idPeriode;
+        this.mode = mode;
+        this.reference = reference;
         this.nomEleve = nomEleve;
         this.nomFrais = nomFrais;
         this.nomDepositaire = nomDepositaire;
-        this.idEntreprise = idEntreprise;
         this.montant = montant;
         this.date = date;
-        this.mode = mode;
-        this.reference = reference;
         this.signature = signature;
         this.beta = beta;
+    }
+
+    
+    
+    public Paiement() {
+        
     }
 
     public int getIdEntreprise() {

@@ -26,27 +26,26 @@ public class Frais implements InterfaceFrais{
     public double montantDefaut;
     public String nom;
     public String monnaie;
+    public Vector<LiaisonFraisPeriode> liaisonsPeriodes = new Vector<LiaisonFraisPeriode>();
+    public Vector<LiaisonFraisClasse> liaisonsClasses = new Vector<LiaisonFraisClasse>();
     public long signatureMonnaie;
     public long signature;
-    public Vector<LiaisonFraisClasse> liaisonsClasses = new Vector<LiaisonFraisClasse>();
-    public Vector<LiaisonFraisPeriode> liaisonsPeriodes = new Vector<LiaisonFraisPeriode>();
     public int beta;
-    
-    public Frais(int id, int idUtilisateur, int idEntreprise, int idExercice, int idMonnaie, long signatureMonnaie, long signature, String nom, String monnaie, int nbTranches, Vector<LiaisonFraisClasse> liaisonsClasses, Vector<LiaisonFraisPeriode> liaisonsPeriodes, double montantDefaut, int beta) {
+
+    public Frais(int id, int idUtilisateur, int idEntreprise, int idExercice, int idMonnaie, double montantDefaut, String nom, String monnaie, long signatureMonnaie, long signature, int beta) {
         this.id = id;
         this.idUtilisateur = idUtilisateur;
         this.idEntreprise = idEntreprise;
         this.idExercice = idExercice;
-        this.nom = nom;
-        this.liaisonsClasses = liaisonsClasses;
-        this.liaisonsPeriodes = liaisonsPeriodes;
         this.idMonnaie = idMonnaie;
+        this.montantDefaut = montantDefaut;
+        this.nom = nom;
         this.monnaie = monnaie;
         this.signatureMonnaie = signatureMonnaie;
         this.signature = signature;
-        this.montantDefaut = montantDefaut;
         this.beta = beta;
     }
+    
 
     public Frais() {
     }
