@@ -24,12 +24,13 @@ public class Decaissement implements InterfaceDecaissement{
     public String motif;
     public int idCharge;
     public String charge;
+    public int idEntreprise;
     public int idExercice;
     public int idUtilisateur;
     public long signature;
     public int beta;
 
-    public Decaissement(int id, int source, String reference, Date date, double montant, int idMonnaie, String monnaie, String beneficiaire, String motif, int idCharge, String charge, int idExercice, int idUtilisateur, long signature, int beta) {
+    public Decaissement(int id, int source, String reference, Date date, double montant, int idMonnaie, String monnaie, String beneficiaire, String motif, int idCharge, String charge, int idEntreprise, int idExercice, int idUtilisateur, long signature, int beta) {
         this.id = id;
         this.source = source;
         this.reference = reference;
@@ -41,6 +42,7 @@ public class Decaissement implements InterfaceDecaissement{
         this.motif = motif;
         this.idCharge = idCharge;
         this.charge = charge;
+        this.idEntreprise = idEntreprise;
         this.idExercice = idExercice;
         this.idUtilisateur = idUtilisateur;
         this.signature = signature;
@@ -49,6 +51,15 @@ public class Decaissement implements InterfaceDecaissement{
 
     public Decaissement() {
     }
+
+    public int getIdEntreprise() {
+        return idEntreprise;
+    }
+
+    public void setIdEntreprise(int idEntreprise) {
+        this.idEntreprise = idEntreprise;
+    }
+    
 
     public long getSignature() {
         return signature;
@@ -174,7 +185,7 @@ public class Decaissement implements InterfaceDecaissement{
 
     @Override
     public String toString() {
-        return "Decaissement{" + "id=" + id + ", source=" + source + ", reference=" + reference + ", date=" + date + ", montant=" + montant + ", idMonnaie=" + idMonnaie + ", monnaie=" + monnaie + ", beneficiaire=" + beneficiaire + ", motif=" + motif + ", idCharge=" + idCharge + ", charge=" + charge + ", idExercice=" + idExercice + ", idUtilisateur=" + idUtilisateur + ", beta=" + beta + '}';
+        return "Decaissement{" + "id=" + id + ", source=" + source + ", reference=" + reference + ", date=" + date + ", montant=" + montant + ", idMonnaie=" + idMonnaie + ", monnaie=" + monnaie + ", beneficiaire=" + beneficiaire + ", motif=" + motif + ", idCharge=" + idCharge + ", charge=" + charge + ", idEntreprise=" + idEntreprise + ", idExercice=" + idExercice + ", idUtilisateur=" + idUtilisateur + ", signature=" + signature + ", beta=" + beta + '}';
     }
 }
 

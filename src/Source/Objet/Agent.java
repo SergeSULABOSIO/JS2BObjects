@@ -148,6 +148,6 @@ public class Agent implements InterfaceAgent{
 
     @Override
     public String toString() {
-        return "XX_Agent{" + "id=" + id + ", idEntreprise=" + idEntreprise + ", idUtilisateur=" + idUtilisateur + ", idExercice=" + idExercice + ", nom=" + nom + ", postnom=" + postnom + ", prenom=" + prenom + ", sexe=" + sexe + ", niveauEtude=" + niveauEtude + ", signature=" + signature + ", categorie=" + categorie + '}';
+        return "Agent{" + "id=" + id + ", idEntreprise=" + idEntreprise + ", idUtilisateur=" + idUtilisateur + ", idExercice=" + idExercice + ", nom=" + nom + ", postnom=" + postnom + ", prenom=" + prenom + ", sexe=" + sexe + ", niveauEtude=" + niveauEtude + ", signature=" + signature + ", categorie=" + categorie + '}';
     }
 }

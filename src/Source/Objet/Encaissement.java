@@ -25,12 +25,13 @@ public class Encaissement implements InterfaceEncaissement{
     public String motif;
     public int idRevenu;
     public String revenu;
+    public int idEntreprise;
     public int idExercice;
     public int idUtilisateur;
     public long signature;
     public int beta;
 
-    public Encaissement(int id, int destination, String reference, Date date, double montant, int idMonnaie, String monnaie, String effectuePar, String motif, int idRevenu, String revenu, int idExercice, int idUtilisateur, long signature, int beta) {
+    public Encaissement(int id, int destination, String reference, Date date, double montant, int idMonnaie, String monnaie, String effectuePar, String motif, int idRevenu, String revenu, int idEntreprise, int idExercice, int idUtilisateur, long signature, int beta) {
         this.id = id;
         this.destination = destination;
         this.reference = reference;
@@ -42,6 +43,7 @@ public class Encaissement implements InterfaceEncaissement{
         this.motif = motif;
         this.idRevenu = idRevenu;
         this.revenu = revenu;
+        this.idEntreprise = idEntreprise;
         this.idExercice = idExercice;
         this.idUtilisateur = idUtilisateur;
         this.signature = signature;
@@ -51,6 +53,15 @@ public class Encaissement implements InterfaceEncaissement{
     public Encaissement() {
     }
 
+    public int getIdEntreprise() {
+        return idEntreprise;
+    }
+
+    public void setIdEntreprise(int idEntreprise) {
+        this.idEntreprise = idEntreprise;
+    }
+
+    
     public long getSignature() {
         return signature;
     }
@@ -175,7 +186,7 @@ public class Encaissement implements InterfaceEncaissement{
 
     @Override
     public String toString() {
-        return "Encaissement{" + "id=" + id + ", destination=" + destination + ", reference=" + reference + ", date=" + date + ", montant=" + montant + ", idMonnaie=" + idMonnaie + ", monnaie=" + monnaie + ", effectuePar=" + effectuePar + ", motif=" + motif + ", idRevenu=" + idRevenu + ", revenu=" + revenu + ", idExercice=" + idExercice + ", idUtilisateur=" + idUtilisateur + ", beta=" + beta + '}';
+        return "Encaissement{" + "id=" + id + ", destination=" + destination + ", reference=" + reference + ", date=" + date + ", montant=" + montant + ", idMonnaie=" + idMonnaie + ", monnaie=" + monnaie + ", effectuePar=" + effectuePar + ", motif=" + motif + ", idRevenu=" + idRevenu + ", revenu=" + revenu + ", idEntreprise=" + idEntreprise + ", idExercice=" + idExercice + ", idUtilisateur=" + idUtilisateur + ", signature=" + signature + ", beta=" + beta + '}';
     }
 }
 
