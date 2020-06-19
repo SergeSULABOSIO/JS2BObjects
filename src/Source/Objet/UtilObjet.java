@@ -25,8 +25,8 @@ import javax.swing.JOptionPane;
  */
 public class UtilObjet {
 
-    public static String nomApplication = "[e]-Kelasi";
-    public static String pageWeb = "http://www.visiterlardc.com/s2b";
+    public static String nomApplication = "Kelasi";
+    public static String pageWeb = "www.kelasi.net";
 
     public static String DOSSIER_ANNEE = "ANNEE";
     public static String DOSSIER_MONNAIE = "MONNAIE";
@@ -80,7 +80,7 @@ public class UtilObjet {
             Desktop desktop = Desktop.isDesktopSupported() ? Desktop.getDesktop() : null;
             if (desktop != null && desktop.isSupported(Desktop.Action.BROWSE)) {
                 try {
-                    desktop.browse(new URL(pageWeb + parametres).toURI());
+                    desktop.browse(new URL("https://" + pageWeb + "/mon-compte" + parametres).toURI());
                     return true;
                 } catch (Exception e) {
                     e.printStackTrace();
@@ -108,7 +108,7 @@ public class UtilObjet {
         Desktop desktop = Desktop.isDesktopSupported() ? Desktop.getDesktop() : null;
         if (desktop != null && desktop.isSupported(Desktop.Action.BROWSE)) {
             try {
-                desktop.browse(new URL(pageWeb + parametres).toURI());
+                desktop.browse(new URL("https://" + pageWeb + "/mon-compte" + parametres).toURI());
                 return true;
             } catch (Exception e) {
                 e.printStackTrace();
